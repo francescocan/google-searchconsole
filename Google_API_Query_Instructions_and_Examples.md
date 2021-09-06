@@ -1,12 +1,11 @@
-Getting all your search data
+# Getting all your search data
 
-source: https://developers.google.com/webmaster-tools/search-console-api-original/v3/how-tos/all-your-data
+** source:** https://developers.google.com/webmaster-tools/search-console-api-original/v3/how-tos/all-your-data
 
-Query details
-You can query data grouped by page or property.
+Query details: You can query data grouped by **page or property**.
 
-Grouped by page
-For accurate counts, you must omit the page and query dimensions, like this:
+## Grouped by page
+**For accurate counts, you must omit the page and query dimensions, like this:
 
 
 "startDate": "2018-06-01",
@@ -28,8 +27,11 @@ For greater detail, including page and/or query information, at the expense of l
 startDate / endDate: Choose a one-day window by selecting the same date.
 dimensions: Include page. Optionally include any combination of query, country, or device.
 searchType: Enumerate over "web", "image", and "video" as desired in separate queries.
-Grouped by property
-For accurate counts, you must omit the page and query dimensions, like this:
+
+
+
+## Grouped by property
+**For accurate counts, you must omit the page and query dimensions, like this:
 
 
 "startDate": "2018-06-01",
@@ -52,10 +54,11 @@ searchType: Enumerate over "web", "image", and "video" as desired in separate qu
 Grouping results by page or property
 Impressions, clicks, position, and click-through-rate are are calculated differently when grouping results by page rather than by property. Learn more.
 
-Why do I lose data when asking for more detail?
+### Why do I lose data when asking for more detail?
+
 When you group by page and/or query, our system may drop some data in order to be able to calculate results in a reasonable time using a reasonable amount of computing resources.
 
-Getting search appearance data
+### Getting search appearance data
 Search appearance is not available as a column along with any other dimensions. Therefore, if you want to see search appearance information for your site, you must follow this process:
 
 Specify searchAppearance as the only dimension, which will group all data by search appearance type with no other dimensions.
