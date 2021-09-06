@@ -336,8 +336,8 @@ class Report:
         self.raw = []
         self.queries = []
 
-        self.dimensions = query.raw.get('dimensions', [])
-        self.metrics = ['date', 'query', 'clicks', 'impressions', 'ctr', 'position']
+        self.dimensions = query.raw.get('date', 'query', 'page', 'country', 'searchAppearance', 'device', [])
+        self.metrics = ['clicks', 'impressions', 'ctr', 'position']
         self.columns = self.dimensions + self.metrics
         self.Row = collections.namedtuple('Row', self.columns)
         self.rows = []
