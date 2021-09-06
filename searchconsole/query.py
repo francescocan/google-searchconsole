@@ -107,7 +107,7 @@ class Query:
 
         Args:
             *dimensions (str): Dimensions you would like to report on.
-                Possible values: country, device, page, query, searchAppearance
+                Possible values: date, country, device, page, query, searchAppearance
 
         Returns:
             `searchconsole.query.Query`
@@ -336,7 +336,7 @@ class Report:
         self.raw = []
         self.queries = []
 
-        self.dimensions = query.raw.get('date', 'query', 'page', 'country', 'searchAppearance', 'device', [])
+        self.dimensions = query.raw.get('dimensions', [])
         self.metrics = ['clicks', 'impressions', 'ctr', 'position']
         self.columns = self.dimensions + self.metrics
         self.Row = collections.namedtuple('Row', self.columns)
